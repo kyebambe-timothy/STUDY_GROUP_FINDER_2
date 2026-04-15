@@ -15,7 +15,7 @@ const Profile = () => {
         fullName: user.name || '',
         email: user.email || '',
         program: user.program_of_study || '',
-        yearOfStudy: user.year_of_study ? `Year ${user.year_of_study}` : ''
+        yearOfStudy: user.year_of_study ? `Year ${user.year_of_study}` : '',
       });
     }
 
