@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+    body {
+        font-family: "Trebuchet MS", sans-serif;
+        font-size: 12pt;
+        line-height: 1.5;
+        text-align: justify;
+        margin: 40px;
+    }
+    h1, h2, h3, h4 {
+        text-align: left;
+        margin-top: 24px;
+        color: #000;
+    }
+    .header-center {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .header-title {
+        font-size: 16pt;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .header-sub {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .title-block {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .title-block p {
+        margin: 5px 0;
+        font-weight: bold;
+    }
+    .page-break {
+        page-break-before: always;
+    }
+    .doc-section {
+        margin-bottom: 30px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    ul, ol {
+        margin-top: 5px;
+    }
+    .code-block {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ddd;
+        font-family: monospace;
+        font-size: 11pt;
+        white-space: pre-wrap;
+    }
+</style>
+</head>
+<body>
+
+    <div class="header-center">
+        <!-- Optional Logo place -->
+        <p style="font-weight:bold; font-size: 18pt; margin: 0;">UGANDA CHRISTIAN UNIVERSITY</p>
+        <p style="font-style: italic; margin: 0;">A Centre of Excellence in the Heart of Africa</p>
+        <br>
+        <div class="header-title">FACULTY OF ENGINEERING, DESIGN AND TECHNOLOGY</div>
+        <div class="header-sub">DEPARTMENT OF COMPUTING AND TECHNOLOGY</div>
+        <div class="header-sub" style="text-decoration: underline;">EASTER 2026 SEMESTER EXAMINATION</div>
+    </div>
+
+    <div class="title-block">
+        <p>PROGRAM: BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p>
+        <p>YEAR: 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SEMESTER: 2</p>
+        <p>COURSE CODE: CSC1202</p>
+        <p>COURSE NAME: WEB AND MOBILE APPLICATION DEVELOPMENT</p>
+        <p>EXAMINATION TYPE: 100% PROJECT-BASED EXAM</p>
+        <p>PROJECT DURATION: APRIL 2026</p>
+        <br><br>
+        <p style="font-size: 16pt; text-align: center; text-decoration: underline;">PROJECT DOCUMENTATION: STUDENT STUDY GROUP FINDER</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2 style="text-align: center;">Project Team Members</h2>
+    <div class="doc-section">
+        <p>This examination project was jointly developed and submitted by the following student collaborative group:</p>
+        <table>
+            <tr>
+                <th style="width: 10%">S/N</th>
+                <th style="width: 40%">Member Name</th>
+                <th style="width: 25%">Registration No.</th>
+                <th style="width: 25%">Access No.</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>[Enter Member 1 Full Name]</td>
+                <td>[Reg No 1]</td>
+                <td>[Access No 1]</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>[Enter Member 2 Full Name]</td>
+                <td>[Reg No 2]</td>
+                <td>[Access No 2]</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>[Enter Member 3 Full Name]</td>
+                <td>[Reg No 3]</td>
+                <td>[Access No 3]</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>[Enter Member 4 Full Name]</td>
+                <td>[Reg No 4]</td>
+                <td>[Access No 4]</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>[Enter Member 5 Full Name]</td>
+                <td>[Reg No 5]</td>
+                <td>[Access No 5]</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>1. System Architecture Diagram</h2>
+    <div class="doc-section">
+        <p>
+            The "Student Study Group Finder" follows a robust three-tier application architecture. This structure segregates the responsibilities of the system to ensure modularity, scalability, and ease of maintenance in line with modern web development standards.
+        </p>
+        <p>
+            <strong>Client Tier (Frontend):</strong> Built using React.js and Vite. It utilizes React Router for seamless single-page application navigation and Axios for executing secure HTTP requests to the backend API.
+            <br><strong>Application Tier (Backend):</strong> Developed with Node.js and Express.js, providing robust RESTful APIs. It manages secured routing (authentication, user management, and study groups) and communicates with the database using the Sequelize Object-Relational Mapper (ORM).
+            <br><strong>Data Tier (Database):</strong> A MySQL relational database responsible for persistently storing user credentials, group memberships, and session data, bounded by strict constraints and relationships.
+        </p>
+        <img src="c:/Users/user/Desktop/project/STUDY_GROUP_FINDER_2/erd/Client-Server-Architecture.png" alt="System Architecture Diagram" />
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>2. Entity-Relationship (ER) Diagram</h2>
+    <div class="doc-section">
+        <p>
+            The database structure relies on normalized relational data modeling to prevent data duplication and maintain referential integrity. User objects, Study Group entities, Group Memberships, and Study Sessions interact dynamically through properly enforced Foreign Keys. 
+        </p>
+        <p>
+            The ER diagram below conceptualizes the structural bindings between the core modules. Users can belong to multiple groups (Many-to-Many resolved by the GroupMember junction table), and study groups can hold multiple scheduled sessions or posts.
+        </p>
+        <!-- Must use absolute path for word COM to resolve correctly -->
+        <img src="c:/Users/user/Desktop/project/STUDY_GROUP_FINDER_2/erd/User-Engagement.png" alt="ER Diagram" />
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>3. User Manual</h2>
+    <div class="doc-section">
+        <p>
+            The Student Study Group Finder is designed to offer an intuitive user experience for seamless academic collaboration across the university campus. This section provides operational guidelines for core functionality.
+        </p>
+        
+        <h3>3.1. Account Registration & Authentication</h3>
+        <p>
+            Upon loading the platform, unregistered students must select the <strong>Register</strong> option. They are required to input their Full Name, valid Email address, a secure Password, their Program of Study, and Year of Study. Data validation guarantees inputs meet requirements. Existing users can access their secured dashboard via the <strong>Login</strong> portal leveraging JWT-based authentication.
+        </p>
+
+        <h3>3.2. Discovering and Joining Study Groups</h3>
+        <p>
+            After a successful login, the user's dashboard displays a repository of active study groups.
+            <ul>
+                <li><strong>Search/Filter:</strong> Students can query groups efficiently based on <em>Course Name</em>, <em>Group Title</em>, or <em>Faculty</em>.</li>
+                <li><strong>Group Details:</strong> Clicking on a group reveals its comprehensive details, such as group description, course focus, meeting medium (Virtual or Physical location), and capacity constraints.</li>
+                <li><strong>Enrollment:</strong> If the parameters are favorable, users select the "Join Group" option, instantly converting them into active members.</li>
+            </ul>
+        </p>
+
+        <h3>3.3. Creation & Administration of Study Groups</h3>
+        <p>
+            Students possess the autonomy to initiate study groups tailored to specific academic needs.
+            <ul>
+                <li><strong>Initialization:</strong> From the dashboard, selecting "Create Group" prompts a form requiring the Group Name, pertinent Course Code, Description, and the default Meeting Location.</li>
+                <li><strong>Leadership Capabilities:</strong> The user initiating the group assumes the system role of a <strong>Group Leader</strong>. Leaders have escalated privileges to modify group metadata, evaluate member activity, and arbitrarily expel inactive peers.</li>
+            </ul>
+        </p>
+
+        <h3>3.4. Orchestrating Study Sessions</h3>
+        <p>
+            Organized scheduling is instrumental. Group leaders can invoke the "Create Session" capability directly from the group interface. This schedules upcoming agendas and broadcasts the Date, specific Time, localized or Web Meeting link, and a descriptive brief to all group members. Members monitor upcoming iterations via their personal Dashboard.
+        </p>
+
+        <h3>3.5. Internal Communication</h3>
+        <p>
+            In-group dialogues cultivate learning. Each group inherently manages a designated communication board where members can dispatch short posts to inquire about challenging topics, circulate notes, or align on upcoming scheduled sessions proactively.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>4. API Documentation</h2>
+    <div class="doc-section">
+        <p>
+            The system exposes a secure REST API architecture for client-server communication. Secured endpoints necessitate a valid JSON Web Token generated upon login, supplied through the HTTP Authorization header context (`Bearer &lt;TOKEN&gt;`).
+        </p>
+
+        <h3>4.1 User Authentication Module</h3>
+        <table>
+            <tr>
+                <th style="width: 15%">Method / Endpoint</th>
+                <th style="width: 85%">Description & Specification</th>
+            </tr>
+            <tr>
+                <td><strong>POST</strong><br><code>/api/auth/register</code></td>
+                <td>
+                    <strong>Description:</strong> Registers a user identity within the system. Payload constraints are verified.<br>
+                    <strong>Payload Schema:</strong> <code>{ username: String, email: String, password: String, role: String, programOfStudy: String }</code>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>POST</strong><br><code>/api/auth/login</code></td>
+                <td>
+                    <strong>Description:</strong> Authenticates the user credentials and returns an encrypted JWT payload.<br>
+                    <strong>Payload Schema:</strong> <code>{ email: String, password: String }</code>
+                </td>
+            </tr>
+        </table>
+
+        <h3>4.2 Study Group Administration</h3>
+        <table>
+            <tr>
+                <th style="width: 15%">Method / Endpoint</th>
+                <th style="width: 85%">Description & Specification</th>
+            </tr>
+            <tr>
+                <td><strong>GET</strong><br><code>/api/groups</code></td>
+                <td>
+                    <strong>Description:</strong> Fetches all formally registered study groups. Supports query string filters (e.g. ?faculty=Science).
+                </td>
+            </tr>
+            <tr>
+                <td><strong>POST</strong><br><code>/api/groups</code></td>
+                <td>
+                    <strong>Description:</strong> Provisions a new study group object. Assigns the requester as the Group Leader.<br>
+                    <strong>Payload Schema:</strong> <code>{ name: String, course_name_code: String, description: String, location: String }</code>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>POST</strong><br><code>/api/groups/:id/join</code></td>
+                <td>
+                    <strong>Description:</strong> Triggers the authenticated user's entry into the specified Study Group.
+                </td>
+            </tr>
+        </table>
+
+        <h3>4.3 Study Sessions & Engagement</h3>
+        <table>
+            <tr>
+                <th style="width: 15%">Method / Endpoint</th>
+                <th style="width: 85%">Description & Specification</th>
+            </tr>
+            <tr>
+                <td><strong>GET</strong><br><code>/api/sessions/group/:groupId</code></td>
+                <td>
+                    <strong>Description:</strong> Retrieves an array of all upcoming study sessions associated with an explicit group.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>POST</strong><br><code>/api/sessions</code></td>
+                <td>
+                    <strong>Description:</strong> Instantiates a new scheduled session. Restricted exclusively to Group Leaders.<br>
+                    <strong>Payload Schema:</strong> <code>{ groupId: Integer, date: String, time: String, location: String, description: String }</code>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>POST</strong><br><code>/api/posts</code></td>
+                <td>
+                    <strong>Description:</strong> Appends a communication thread/post to a specified study group's bulletin.
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
